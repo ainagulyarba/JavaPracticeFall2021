@@ -9,9 +9,9 @@ public class Kisi {
    public  Kisi(){
    }
     public Kisi(String adSoyad, String kimlikNo, int yas) {
-        this.adSoyad = adSoyad;
+        setAdSoyad(adSoyad);
         this.kimlikNo = kimlikNo;
-        this.yas = yas;
+        setYas(yas);
     }
 
     public String getAdSoyad() {
@@ -19,7 +19,8 @@ public class Kisi {
     }
 
     public void setAdSoyad(String adSoyad) {
-        this.adSoyad = adSoyad;
+
+        this.adSoyad = adSoyad.toUpperCase();
     }
 
     public String getKimlikNo() {
@@ -35,6 +36,19 @@ public class Kisi {
     }
 
     public void setYas(int yas) {
+        if (yas <0) {
+            this.yas=-yas;
+        }
+        else
         this.yas = yas;
+    }
+
+    @Override
+    public String toString() {
+        return "Kisi{" +
+                "adSoyad='" + adSoyad + '\'' +
+                ", kimlikNo='" + kimlikNo + '\'' +
+                ", yas=" + yas +
+                '}';
     }
 }

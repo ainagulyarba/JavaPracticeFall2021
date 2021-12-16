@@ -20,6 +20,7 @@ public class Ogrenci extends Kisi{
     }
 
     public void setNumara(String numara) {
+
         this.numara = numara;
     }
 
@@ -29,5 +30,13 @@ public class Ogrenci extends Kisi{
 
     public void setSinif(String sinif) {
         this.sinif = sinif;
+    }
+
+    @Override
+    public String toString() {
+        return "Ogrenci{" +"ad soyad="+getAdSoyad()+", kimlik No="+getKimlikNo()+", yas="+getYas()+
+                ", numara='" + numara + '\'' +
+                ", sinif='" + sinif + '\'' +
+                '}';
     }
 }
